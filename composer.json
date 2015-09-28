@@ -1,0 +1,16 @@
+{
+    "name": "root/media-manager",
+    "description": "package to manage any kind of file, upload/delete/show",
+    "type": "project",
+    "require": {
+        "intervention/image": "^2.3@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tamir hativa",
+            "email": "tamirh67@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
