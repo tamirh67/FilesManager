@@ -1,5 +1,5 @@
 {
-    "name": "root/media-manager",
+    "name": "tamirh67/media-manager",
     "description": "package to manage any kind of file, upload/delete/show",
     "type": "project",
     "require": {
