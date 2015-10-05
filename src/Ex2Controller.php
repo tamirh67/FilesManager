@@ -5,7 +5,7 @@ namespace tamirh67\MediaManager;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\exObj2;
+use tamirh67\MediaManager\exObj2;
 
 class Ex2Controller extends Controller
 {

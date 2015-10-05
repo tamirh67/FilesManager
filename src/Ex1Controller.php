@@ -5,10 +5,10 @@ namespace tamirh67\MediaManager;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-//use tamirh67\MediaManager\models\exObj1;
-//use tamirh67\MediaManager\models\Media;
-use App\exObj1;
-use App\Media;
+use tamirh67\MediaManager\exObj1;
+use tamirh67\MediaManager\Media;
+//use App\exObj1;
+//use App\Media;
 
 class Ex1Controller extends Controller
 {

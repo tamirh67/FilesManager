@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use tamirh67\MediaManager;
-//use tamirh67\MediaManager\models\Media;
-use App\Media;
+use tamirh67\MediaManager\Media;
+//use App\Media;
 
 
 class MediaController extends Controller

@@ -18,6 +18,22 @@ class MediaManagerServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'media-manager');
 
         $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'media-manager');
+
+        $this->publishes([
+            __DIR__.'/resources/assets/css' => public_path('/css')
+        ], 'css');
+
+        $this->publishes([
+            __DIR__.'/resources/assets/js' => public_path('/js')
+        ], 'js');
+
+        $this->publishes([
+            __DIR__.'/resources/assets/img' => '/database/migrations'
+        ], 'migrations');
+
+        $this->publishes([
+            __DIR__.'/database/migrations' => public_path('/img')
+        ], 'images');
     }
 
     /**
