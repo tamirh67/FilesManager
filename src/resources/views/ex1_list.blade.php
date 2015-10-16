@@ -1,4 +1,4 @@
-@extends('media-manager::master')
+@extends('MediaManager::master')
 
 @section('styles')
     <!-- Magnific Popup core CSS file -->

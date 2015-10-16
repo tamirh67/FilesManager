@@ -30,7 +30,7 @@ class Ex1Controller extends Controller
             ->orderBy('id', 'asc')
             ->get();
 
-        return view('media-manager::ex1_list', compact('ex1objects'), compact('ex1list'));
+        return view('MediaManager::ex1_list', compact('ex1objects'), compact('ex1list'));
     }
 
     /**
@@ -77,7 +77,7 @@ class Ex1Controller extends Controller
 
         $theDocuments   = $ex1->mymedia()->get();
 
-        return view('media-manager::ex1_edit')
+        return view('MediaManager::ex1_edit')
             ->with('theObject', $ex1)
             ->with('theDocuments', $theDocuments)
             ;

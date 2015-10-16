@@ -15,9 +15,9 @@ class MediaManagerServiceProvider extends ServiceProvider
     {
         require __DIR__ . '/Http/routes.php';
 
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'media-manager');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'MediaManager');
 
-        $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'media-manager');
+        $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'MediaManager');
 
         $this->publishes([
             __DIR__.'/resources/assets/css' => public_path('/css')
@@ -43,7 +43,7 @@ class MediaManagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('media-manager', function() {
+        $this->app->bind('MediaManager', function() {
             return new MediaManager;
         });
 

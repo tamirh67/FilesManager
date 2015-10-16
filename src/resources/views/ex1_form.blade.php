@@ -1,4 +1,4 @@
-@extends('media-manager::master')
+@extends('MediaManager::master')
 
 @section('content')
     @if(Session::has('error'))

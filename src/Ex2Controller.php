@@ -24,7 +24,7 @@ class Ex2Controller extends Controller
             ->get();
 
 
-        return view('media-manager::ex2_list')
+        return view('MediaManager::ex2_list')
             ->with('ex2objects', $ex2list)
             ;
     }
@@ -73,7 +73,7 @@ class Ex2Controller extends Controller
 
         $theDocuments   = $ex2->mymedia()->get();
 
-        return view('media-manager::ex2_edit')
+        return view('MediaManager::ex2_edit')
             ->with('theObject', $ex2)
             ->with('theDocuments', $theDocuments)
             ;

@@ -1,5 +1,5 @@
 
-@extends('media-manager::master')
+@extends('MediaManager::master')
 
 @section('styles')
 @stop

@@ -13,7 +13,7 @@ Route::get('/ex1', 'tamirh67\MediaManager\Ex1Controller@index');
 Route::get('/ex1edit/{id}', 'tamirh67\MediaManager\Ex1Controller@edit');
 Route::post('/ex1delete', array('as'=>'ex1delete', 'uses'=>'Ex1Controller@destroy') );
 Route::get('/ex1form', function () {
-    return view('media-manager::ex1_form');
+    return view('MediaManager::ex1_form');
 });
 Route::post('/ex1upload', 'tamirh67\MediaManager\MediaController@store');
 
@@ -23,7 +23,7 @@ Route::post('/ex2makeavatar', array('as'=>'makeavatar', 'uses'=>'tamirh67\MediaM
 Route::get('/ex2edit/{id}', 'tamirh67\MediaManager\Ex2Controller@edit');
 Route::get('/ex2', 'tamirh67\MediaManager\Ex2Controller@index');
 Route::get('/ex2form', function () {
-    return view('media-manager::ex2_form');
+    return view('MediaManager::ex2_form');
 });
 Route::post('/ex2upload', 'tamirh67\MediaManager\MediaController@store_ajax');
 
