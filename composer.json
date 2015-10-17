@@ -1,5 +1,5 @@
 {
-    "name": "tamirh67/FilesManager",
+    "name": "tamirh67/filesmanager",
     "description": "package to manage any kind of file, upload/delete/show",
     "type": "project",
     "require": {
