@@ -28,11 +28,11 @@ class FilesManagerServiceProvider extends ServiceProvider
         ], 'js');
 
         $this->publishes([
-            __DIR__.'/resources/assets/img' => '/database/migrations'
+            __DIR__.'/database/migrations' => database_path('migrations')
         ], 'migrations');
 
         $this->publishes([
-            __DIR__.'/database/migrations' => public_path('/img')
+            __DIR__.'/resources/assets/img' => public_path('/img')
         ], 'images');
 
         $this->publishes([
