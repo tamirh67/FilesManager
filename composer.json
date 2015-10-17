@@ -1,9 +1,14 @@
 {
-    "name": "tamirh67/MediaManager",
+    "name": "tamirh67/media-manager",
     "description": "package to manage any kind of file, upload/delete/show",
     "type": "project",
     "require": {
-      "intervention/image": "^2.3"
+      "intervention/image": "2.*"
+    },
+    "autoload" : {
+      "psr-4" : {
+        "tamirh67\\MediaManager\\" : "src/"
+        }
     },
     "license": "MIT",
     "authors": [
