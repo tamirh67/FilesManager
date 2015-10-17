@@ -1,10 +1,10 @@
 <?php
 
-namespace tamirh67\MediaManager;
+namespace tamirh67\FilesManager;
 
 use Illuminate\Support\ServiceProvider;
 
-class MediaManagerServiceProvider extends ServiceProvider
+class FilesManagerServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -15,9 +15,9 @@ class MediaManagerServiceProvider extends ServiceProvider
     {
         require __DIR__ . '/Http/routes.php';
 
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'MediaManager');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'FilesManager');
 
-        $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'MediaManager');
+        $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'FilesManager');
 
         $this->publishes([
             __DIR__.'/resources/assets/css' => public_path('/css')
@@ -34,6 +34,10 @@ class MediaManagerServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/database/migrations' => public_path('/img')
         ], 'images');
+
+        $this->publishes([
+            __DIR__ . '/config/filesmanager.php' => config_path('filesmanager.php', 'config'),
+        ], 'filesmanager_config');
     }
 
     /**
@@ -43,11 +47,11 @@ class MediaManagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('MediaManager', function() {
-            return new MediaManager;
+        $this->app->bind('FilesManager', function() {
+            return new FilesManager;
         });
 
-        $this->app->make('tamirh67\MediaManager\MediaController');
+        $this->app->make('tamirh67\FilesManager\FilesController');
 
     }
 }

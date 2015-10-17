@@ -1,4 +1,4 @@
-@extends('MediaManager::master')
+@extends('FilesManager::master')
 @section('styles')
     <!-- Magnific Popup core CSS file -->
     <link rel="stylesheet" href="/css/magnific-popup.css">
@@ -41,7 +41,7 @@
                     <td style="vertical-align:middle">
                         {!! Form::open(array('method' => 'DELETE', 'route' => 'ex2delete')) !!}
                         <input name="document_id" type="hidden" value="{{$anObject->id}}">
-                        <input name="entity_type" type="hidden" value="App\ex2Obj">
+                        <input name="entity_type" type="hidden" value="tamirh67\FilesManager\ex2Obj">
                         {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
                         {!! Form::close() !!}
                     </td>

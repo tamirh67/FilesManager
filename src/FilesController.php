@@ -1,16 +1,16 @@
 <?php
 
-namespace tamirh67\MediaManager;
+namespace tamirh67\FilesManager;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use tamirh67\MediaManager;
-use tamirh67\MediaManager\Media;
+use tamirh67\FilesManager;
+use tamirh67\FilesManager\Media;
 //use App\Media;
 
 
-class MediaController extends Controller
+class FilesController extends Controller
 {
 
     public function createThumbnail($sourcefilepath, $outputDirPath, $originalfilename, $sizex, $sizey) {
@@ -66,7 +66,7 @@ class MediaController extends Controller
      */
     public function index()
     {
-        return \tamirh67\MediaManager\MediaManager::hello() . ' from controller.';
+        return \tamirh67\FilesManager\FilesManager::hello() . ' from controller.';
     }
 
     /**

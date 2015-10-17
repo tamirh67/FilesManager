@@ -1,5 +1,5 @@
 
-@extends('MediaManager::master')
+@extends('FilesManager::master')
 
 @section('styles')
 @stop
@@ -14,7 +14,7 @@
       id="dz1">
     {!! csrf_field() !!}
     <input name="mediaable_id" type="text"  />
-    <input name="mediaable_type" type="hidden"  value="App\exObj2"/>
+    <input name="mediaable_type" type="hidden"  value="tamirh67\FilesManager\exObj2"/>
     <div class="fallback">
         <input name="files" type="file" multiple />
     </div>

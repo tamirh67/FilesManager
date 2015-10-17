@@ -1,4 +1,4 @@
-@extends('MediaManager::master')
+@extends('FilesManager::master')
 
 @section('styles')
     <!-- Magnific Popup core CSS file -->
@@ -76,7 +76,7 @@
                         {!! Form::open(array('route' => 'documentdelete')) !!}
                         <input name="id" type="hidden" value="{{$aDocument->id}}">
                         <input name="mediaable_id" type="hidden" value="{{$theObject->id}}">
-                        <input name="mediaable_type" type="hidden" value="App\ex2Obj">
+                        <input name="mediaable_type" type="hidden" value="tamirh67\FilesManager\ex2Obj">
                         {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
                         {!! Form::close() !!}
 
@@ -84,7 +84,7 @@
                         <input name="object_id" type="hidden" value="{{$theObject->id}}">
                         <input name="doc_id" type="hidden" value="{{$aDocument->id}}">
                         <input name="mediaable_id" type="hidden" value="{{$theObject->id}}">
-                        <input name="mediaable_type" type="hidden" value="App\ex2Obj">
+                        <input name="mediaable_type" type="hidden" value="tamirh67\FilesManager\ex2Obj">
                         {!! Form::submit('Avatar', array('class' => 'btn btn-success')) !!}
                         {!! Form::close() !!}
                     </td>

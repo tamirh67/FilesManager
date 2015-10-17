@@ -1,4 +1,4 @@
-@extends('MediaManager::master')
+@extends('FilesManager::master')
 
 @section('content')
     @if(Session::has('error'))
@@ -7,7 +7,7 @@
 <div class="row " style="margin-top: 5px;">
     {!! Form::open(array('url' => '/ex1upload', 'class' => '', 'method' => 'post', 'files'=>true)) !!}
 
-    <input name="mediaable_type" type="hidden"  value="App\exObj1"/>
+    <input name="mediaable_type" type="hidden"  value="tamirh67\FilesManager\exObj1"/>
 
     <div class="col-xs-6 col-md-6 adjustabit2 pull-left ">
         {!! Form::file('file[]', array('multiple'=>true)) !!}

@@ -1,14 +1,14 @@
 <?php
 
-namespace tamirh67\MediaManager;
+namespace tamirh67\FilesManager;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use tamirh67\MediaManager\exObj1;
-use tamirh67\MediaManager\Media;
-//use App\exObj1;
-//use App\Media;
+use tamirh67\FilesManager\exObj1;
+use tamirh67\FilesManager\Media;
+use Illuminate\Support\Facades\Config;
+
 
 class Ex1Controller extends Controller
 {
@@ -24,13 +24,13 @@ class Ex1Controller extends Controller
         $ex1objects = \DB::table('example_object1')
             ->leftJoin('media', function ($join) {
                 $join->on('example_object1.id', '=', 'media.mediaable_id')
-                    ->where('media.mediaable_type', '=', 'App\exObj1');
+                    ->where('media.mediaable_type', '=', 'tamirh67\FilesManager\exObj1');
             })
             ->select('example_object1.*', 'media.thumbsURL as thumbsURL', 'media.id as MID')
             ->orderBy('id', 'asc')
             ->get();
 
-        return view('MediaManager::ex1_list', compact('ex1objects'), compact('ex1list'));
+        return view('FilesManager::ex1_list', compact('ex1objects'), compact('ex1list'));
     }
 
     /**
@@ -77,7 +77,7 @@ class Ex1Controller extends Controller
 
         $theDocuments   = $ex1->mymedia()->get();
 
-        return view('MediaManager::ex1_edit')
+        return view('FilesManager::ex1_edit')
             ->with('theObject', $ex1)
             ->with('theDocuments', $theDocuments)
             ;

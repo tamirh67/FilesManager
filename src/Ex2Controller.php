@@ -1,11 +1,11 @@
 <?php
 
-namespace tamirh67\MediaManager;
+namespace tamirh67\FilesManager;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use tamirh67\MediaManager\exObj2;
+use tamirh67\FilesManager\exObj2;
 
 class Ex2Controller extends Controller
 {
@@ -23,8 +23,7 @@ class Ex2Controller extends Controller
             ->orderBy('id', 'asc')
             ->get();
 
-
-        return view('MediaManager::ex2_list')
+        return view('FilesManager::ex2_list')
             ->with('ex2objects', $ex2list)
             ;
     }
@@ -73,7 +72,7 @@ class Ex2Controller extends Controller
 
         $theDocuments   = $ex2->mymedia()->get();
 
-        return view('MediaManager::ex2_edit')
+        return view('FilesManager::ex2_edit')
             ->with('theObject', $ex2)
             ->with('theDocuments', $theDocuments)
             ;

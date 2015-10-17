@@ -1,6 +1,6 @@
 <?php
 
-namespace tamirh67\MediaManager;
+namespace tamirh67\FilesManager;
 //namespace App;
 
 use Illuminate\Database\Eloquent\Model;
@@ -15,7 +15,7 @@ class exObj2 extends Model
      */
     public function mymedia()
     {
-        return $this->morphMany('tamirh67\MediaManager\Media', 'mediaable');
+        return $this->morphMany('tamirh67\FilesManager\Media', 'mediaable');
     }
 
 }
