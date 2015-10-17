@@ -148,6 +148,14 @@ class FilesController extends Controller
         $size           = $file->getClientSize();
         $targetDir      = storage_path('app/uploads/');
 
+        /*
+        if(!file_exists($targetDir )) {
+            if(!mkdir($targetDir )) {
+                return false; //die("There was a problem. Please try again!");
+            }
+        }
+        */
+
         // Make a random new file name
         $weirdFilename  = $this->generateKeyname($file);
 

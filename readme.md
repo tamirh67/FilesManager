@@ -16,6 +16,12 @@ After updating composer, add the ServiceProvider to the providers array in `conf
 
 ```php
 'tamirh67\FilesManager\FilesManagerServiceProvider',
+'Intervention\Image\ImageServiceProvider::class',
+```
+
+And add the ServiceProvider to the facades array in `config/app.php`
+```php
+'Image'     => Intervention\Image\Facades\Image::class,
 ```
 
 To publish the config settings in Laravel 5 use:

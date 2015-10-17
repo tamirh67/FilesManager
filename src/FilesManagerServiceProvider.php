@@ -38,6 +38,15 @@ class FilesManagerServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/config/filesmanager.php' => config_path('filesmanager.php', 'config'),
         ], 'filesmanager_config');
+
+        // create directories
+        if(!file_exists(public_path('/img/thumbs'))) {
+            mkdir(public_path('/img/thumbs'));
+        }
+
+        if(!file_exists(storage_path('/app/uploads'))) {
+            mkdir(storage_path('/app/uploads'));
+        }
     }
 
     /**
