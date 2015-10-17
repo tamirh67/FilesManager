@@ -1,6 +1,6 @@
 
 
-#Media Manager
+#Files Manager
 
 A basic package to upload files in L5, with some examples of how to attach media to any object, list, show gallery of images, etc...
 
@@ -9,13 +9,13 @@ A basic package to upload files in L5, with some examples of how to attach media
 Require this package in your `composer.json` and update composer. This will download the package
 
 ```php
-"tamirh67/MediaManager": "dev-master"
+"tamirh67/FilesManager": "dev-master"
 ```
 
 After updating composer, add the ServiceProvider to the providers array in `config/app.php`
 
 ```php
-'tamirh67\MediaManager\MediaManagerServiceProvider',
+'tamirh67\FilesManager\FilesManagerServiceProvider',
 ```
 
 To publish the config settings in Laravel 5 use:
@@ -24,7 +24,7 @@ To publish the config settings in Laravel 5 use:
 php artisan vendor:publish
 ```
 
-This will add an `excel.php` config file to your config folder.
+This will add an `filesmanager.php` config file to your config folder.
 
 ## Documentation
 
