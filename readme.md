@@ -9,7 +9,7 @@ A basic package to upload files in L5, with some examples of how to attach media
 Require this package in your `composer.json` and update composer. This will download the package
 
 ```php
-"tamirh67/FilesManager": "dev-master"
+"tamirh67/filesmanager": "dev-master"
 ```
 
 After updating composer, add the ServiceProvider to the providers array in `config/app.php`
